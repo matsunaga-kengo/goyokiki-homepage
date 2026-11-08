@@ -1,0 +1,759 @@
+/* 御用聞き案内ページ（固定ページ ID: 7422）CSS正本
+ * index.html のベースCSS + v1・v2相当 + 最終修正v3。
+ * 本文全体を囲む既存の .goyokiki-page に適用。
+ * WordPress「追加CSS」に、このファイル全体を貼り付ける。
+ */
+
+/* Vantage のページ外枠の余白を解除（このページのみ）。 */
+body.page-id-7422 #main {
+  padding: 0;
+}
+
+.goyokiki-page {
+  --paper: #F7F5EF;
+  --green: #344F46;
+  --sand: #C6B49C;
+  --ink: #333735;
+  --line: #06C755;
+  --border: #e2e4dc;
+  width: auto;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.goyokiki-page, .goyokiki-page * {
+  box-sizing: border-box;
+}
+
+html:has(body.page-id-7422) {
+  scroll-padding-top: 110px;
+}
+
+.goyokiki-page a {
+  color: inherit;
+}
+
+.goyokiki-page a:focus-visible,
+.goyokiki-page summary:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 5px;
+}
+
+.goyokiki-page .skip {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 20;
+  background: white;
+  padding: 12px;
+}
+
+.goyokiki-page .skip:focus {
+  top: 10px;
+}
+
+.goyokiki-page .site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  background: rgba(247,245,239,.97);
+  border-bottom: 1px solid var(--border);
+}
+
+.goyokiki-page .header-inner {
+  max-width: 1040px;
+  margin: auto;
+  padding: 15px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.goyokiki-page .brand {
+  text-decoration: none;
+  color: var(--green);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.goyokiki-page .brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .12em;
+  font-weight: 400;
+}
+
+.goyokiki-page .line-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 54px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  background: var(--line);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px #063b1110;
+  transition: filter .2s;
+}
+
+.goyokiki-page .line-button:hover {
+  filter: brightness(.94);
+}
+
+.goyokiki-page .line-button span {
+  font-size: 23px;
+  line-height: 1;
+}
+
+.goyokiki-page .header-inner .line-button {
+  min-height: 44px;
+  padding: 8px 18px;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.goyokiki-page main {
+  padding-top: 88px;
+}
+
+.goyokiki-page .wrap {
+  width: min(720px,calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.goyokiki-page section {
+  padding-block: 64px;
+}
+
+.goyokiki-page h1,
+.goyokiki-page h2,
+.goyokiki-page h3,
+.goyokiki-page p {
+  margin: 0;
+}
+
+.goyokiki-page h1,
+.goyokiki-page h2,
+.goyokiki-page h3 {
+  color: var(--green);
+}
+
+.goyokiki-page h1 {
+  font-size: clamp(30px,5vw,44px);
+  letter-spacing: .035em;
+  line-height: 1.6;
+  margin: 17px 0 22px;
+}
+
+.goyokiki-page h2 {
+  font-size: 28px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  letter-spacing: .04em;
+}
+
+.goyokiki-page h3 {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.goyokiki-page p+p {
+  margin-top: 20px;
+}
+
+.goyokiki-page .section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: .15em;
+}
+
+.goyokiki-page .section-label:before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--sand);
+}
+
+.goyokiki-page .hero {
+  padding-top: 36px;
+}
+
+.goyokiki-page .eyebrow {
+  font-size: 14px;
+  color: var(--green);
+  letter-spacing: .06em;
+}
+
+.goyokiki-page .hero-copy {
+  max-width: 660px;
+}
+
+.goyokiki-page .hero .lead {
+  max-width: 620px;
+}
+
+.goyokiki-page .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 25px 0;
+}
+
+.goyokiki-page .badge {
+  border: 1px solid #d5d9ce;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 13px;
+  background: #fff8;
+}
+
+.goyokiki-page .photo {
+  position: relative;
+  background: #e6e6db;
+  overflow: hidden;
+  border-radius: 16px;
+  isolation: isolate;
+}
+
+.goyokiki-page .photo:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,#e7e8de,#d8ded3);
+  z-index: -1;
+}
+
+.goyokiki-page .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  color: var(--green);
+  font-size: 14px;
+}
+
+.goyokiki-page .hero-photo {
+  height: 320px;
+  margin-top: 36px;
+}
+
+.goyokiki-page .services {
+  border-top: 1px solid var(--border);
+}
+
+.goyokiki-page .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.goyokiki-page .card {
+  background: #fff;
+  padding: 25px 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #344f4608;
+  border: 1px solid var(--border);
+}
+
+.goyokiki-page .icon {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.goyokiki-page .card p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.goyokiki-page .note-box {
+  padding: 25px 28px;
+  background: #eeece3;
+  border-left: 3px solid var(--sand);
+  border-radius: 0 12px 12px 0;
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.goyokiki-page .benefits {
+  background: #eaece4;
+}
+
+.goyokiki-page .benefit-table {
+  display: grid;
+  gap: 1px;
+  background: #d6dcd1;
+  border: 1px solid #d6dcd1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.goyokiki-page .benefit-row {
+  display: grid;
+  grid-template-columns: 1fr 26px 1.15fr;
+  gap: 12px;
+  align-items: center;
+  background: #f7f8f3;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.goyokiki-page .benefit-row span:nth-child(2) {
+  color: var(--green);
+}
+
+.goyokiki-page .benefit-row strong {
+  font-weight: 500;
+  color: var(--green);
+}
+
+.goyokiki-page .fine {
+  font-size: 15px;
+  margin-top: 22px;
+}
+
+.goyokiki-page .price-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+  background: white;
+}
+
+.goyokiki-page .table-frame {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.goyokiki-page .price-table th,
+.goyokiki-page .price-table td {
+  text-align: left;
+  padding: 19px 22px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.goyokiki-page .price-table th {
+  width: 35%;
+  color: var(--green);
+  font-weight: 500;
+  background: #fafaf7;
+}
+
+.goyokiki-page .price-table tr:last-child>* {
+  border-bottom: 0;
+}
+
+.goyokiki-page .price-table tr:first-child td {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.goyokiki-page .profile {
+  border-top: 1px solid var(--border);
+}
+
+.goyokiki-page .profile-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.goyokiki-page .profile-photo {
+  height: 240px;
+}
+
+.goyokiki-page .profile-grid p {
+  font-size: 16px;
+}
+
+.goyokiki-page .areas {
+  background: #eeece3;
+}
+
+.goyokiki-page .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.goyokiki-page .chip {
+  padding: 7px 16px;
+  background: var(--paper);
+  border: 1px solid #d6d2c5;
+  border-radius: 100px;
+  font-size: 16px;
+}
+
+.goyokiki-page .steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: flow;
+}
+
+.goyokiki-page .steps li {
+  counter-increment: flow;
+  position: relative;
+  padding: 0 0 30px 64px;
+  min-height: 86px;
+}
+
+.goyokiki-page .steps li:before {
+  content: counter(flow,decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--sand);
+  border-radius: 50%;
+  color: var(--green);
+  font-size: 14px;
+  background: var(--paper);
+  z-index: 1;
+}
+
+.goyokiki-page .steps li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: 0;
+  width: 1px;
+  background: #d9d6ca;
+}
+
+.goyokiki-page .steps li:last-child {
+  padding-bottom: 0;
+}
+
+.goyokiki-page .steps p {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.goyokiki-page .faq {
+  border-top: 1px solid var(--border);
+}
+
+.goyokiki-page details {
+  border-bottom: 1px solid #d9ddd3;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 0 24px;
+}
+
+.goyokiki-page summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--green);
+}
+
+.goyokiki-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.goyokiki-page summary:after {
+  content: "+";
+  font-size: 24px;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.goyokiki-page details[open] summary:after {
+  content: "−";
+}
+
+.goyokiki-page details p {
+  font-size: 16px;
+  padding: 0 0 24px;
+}
+
+.goyokiki-page .contact {
+  text-align: center;
+  background: var(--green);
+  color: var(--paper);
+  padding-block: 60px;
+}
+
+.goyokiki-page .contact h2 {
+  color: var(--paper);
+  margin-bottom: 15px;
+}
+
+.goyokiki-page .contact .line-button {
+  margin-top: 28px;
+  min-width: 270px;
+}
+
+.goyokiki-page .contact .fine {
+  font-size: 14px;
+  line-height: 2;
+  max-width: 560px;
+  margin: 24px auto 0;
+}
+
+.goyokiki-page footer {
+  text-align: center;
+  padding: 30px 24px;
+  font-size: 13px;
+  color: var(--green);
+  float: none !important;
+  width: auto !important;
+}
+
+.goyokiki-page .mobile-cta {
+  display: none;
+}
+
+@media(max-width:600px) {
+  .goyokiki-page {
+    font-size: 16px;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom,0px));
+  }
+
+  .goyokiki-page .header-inner {
+    padding: 12px 18px;
+    gap: 8px;
+  }
+
+  .goyokiki-page .brand {
+    font-size: 15px;
+  }
+
+  .goyokiki-page .brand small {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .goyokiki-page .header-inner .line-button {
+    font-size: 13px;
+    padding: 8px 13px;
+    gap: 8px;
+  }
+
+  .goyokiki-page .header-inner .line-button span {
+    display: none;
+  }
+
+  .goyokiki-page main {
+    padding-top: 76px;
+  }
+
+  .goyokiki-page .wrap {
+    width: calc(100% - 40px);
+  }
+
+  .goyokiki-page section {
+    padding-block: 46px;
+  }
+
+  .goyokiki-page .hero {
+    padding-top: 30px;
+  }
+
+  .goyokiki-page h1 {
+    font-size: 30px;
+    letter-spacing: 0;
+    margin-block: 15px 20px;
+  }
+
+  .goyokiki-page h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+
+  .goyokiki-page .eyebrow {
+    font-size: 12px;
+  }
+
+  .goyokiki-page .badges {
+    gap: 6px;
+  }
+
+  .goyokiki-page .badge {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .goyokiki-page .hero-photo {
+    height: 230px;
+    margin-top: 28px;
+  }
+
+  .goyokiki-page .hero .line-button {
+    width: 100%;
+  }
+
+  .goyokiki-page .cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .goyokiki-page .card {
+    padding: 23px;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: 16px;
+  }
+
+  .goyokiki-page .card .icon {
+    grid-row: 1/3;
+    margin: 2px 0 0;
+  }
+
+  .goyokiki-page .card p {
+    grid-column: 2;
+    margin-top: 7px;
+  }
+
+  .goyokiki-page .card h3 {
+    font-size: 17px;
+  }
+
+  .goyokiki-page .note-box {
+    padding: 20px;
+  }
+
+  .goyokiki-page .benefit-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 20px;
+  }
+
+  .goyokiki-page .benefit-row span:nth-child(2) {
+    display: none;
+  }
+
+  .goyokiki-page .benefit-row strong:before {
+    content: "→ ";
+    color: var(--green);
+  }
+
+  .goyokiki-page .price-table th,
+  .goyokiki-page .price-table td {
+    padding: 16px 13px;
+  }
+
+  .goyokiki-page .price-table th {
+    width: 39%;
+  }
+
+  .goyokiki-page .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .goyokiki-page .profile-photo {
+    width: 180px;
+    height: 220px;
+  }
+
+  .goyokiki-page .chips {
+    gap: 8px;
+  }
+
+  .goyokiki-page .chip {
+    font-size: 14px;
+    padding: 6px 13px;
+  }
+
+  .goyokiki-page summary {
+    font-size: 16px;
+    gap: 12px;
+  }
+
+  .goyokiki-page details {
+    padding-inline: 20px;
+  }
+
+  .goyokiki-page .contact .line-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .goyokiki-page .mobile-cta {
+    display: block;
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 12;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom,0px));
+    background: #f7f5eff5;
+    border-top: 1px solid var(--border);
+  }
+
+  .goyokiki-page .mobile-cta .line-button {
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .goyokiki-page footer {
+    font-size: 12px;
+    padding-inline: 15px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .goyokiki-page, .goyokiki-page * {
+    scroll-behavior: auto!important;
+    transition: none!important;
+  }
+
+}
+
+/* v1・v2相当：テーマが見出しの前に付ける水色の丸を解除。 */
+.entry-content .goyokiki-page h2:before,
+.entry-content .goyokiki-page h3:before {
+  content: none !important;
+  display: none !important;
+}
+
+/* v3：サイト共通の !important リンク色より詳細度を高くする。 */
+body:not(.home) .entry-content .goyokiki-page a.line-button,
+body:not(.home) .entry-content .goyokiki-page a.line-button:link,
+body:not(.home) .entry-content .goyokiki-page a.line-button:visited,
+body:not(.home) .entry-content .goyokiki-page a.line-button:hover,
+body:not(.home) .entry-content .goyokiki-page a.line-button:active,
+body:not(.home) .entry-content .goyokiki-page a.line-button span {
+  color: #102e1d !important;
+}
